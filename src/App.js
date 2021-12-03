@@ -1,5 +1,3 @@
-import { useEffect, useState } from 'react';
-import axios from 'axios';
 import { Typography } from '@material-ui/core';
 import BooksPage from './pages/BooksPage';
 import { Route, Routes } from 'react-router-dom';
