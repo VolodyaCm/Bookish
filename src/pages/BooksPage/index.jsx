@@ -1,7 +1,7 @@
 import BookList from '../../components/BookList';
 import { useRemoteService } from '../../hooks/useRemoteService';
-import { TextField } from '@material-ui/core';
 import { useState, useEffect } from 'react';
+import SearchBox from '../../components/SearchBox';
 
 const API = 'http://localhost:8080/books';
 
@@ -15,17 +15,11 @@ const BooksPage = () => {
     setUrl(`${API}?q=${term}`);
   }, [term])
 
-
-  console.log('')
   return (
     <>
-      <TextField
-        label='Search'
-        data-test='search'
-        value={term}
-        onChange={changeSearchTerm}
-        margin='normal'
-        variant='outlined' />
+      <SearchBox
+        term={term}
+        onSearch={changeSearchTerm} />
 
       <BookList
         books={data}
