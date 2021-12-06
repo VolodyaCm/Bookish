@@ -13,6 +13,5 @@ export const useFetchBook = (initial) => {
     }
     fetchBook();
   }, [])
-  console.log('Book', book);
   return { book };
 }
